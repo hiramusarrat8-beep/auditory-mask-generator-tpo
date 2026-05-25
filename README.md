@@ -1,77 +1,243 @@
-# Auditory Mask Generator + NeuroFUS GUI
+# Auditory Mask Generator – TPO Edition
 
-This project provides a PyQt6 GUI for:
+> Developed by Dr. Benjamin Kop and Hira Musarrat
 
-* generating auditory masking sounds
-* connecting to a NeuroFUS TPO device
-* running `TUS Only` or `TUS + Mask` stimulation workflows
-* previewing and saving generated audio
-* saving and loading presets
+> [!WARNING]
+> This software is intended for research use only and should be operated only by trained users following institutional ultrasound safety guidelines.
 
-## Main Features
+A PyQt6-based auditory masking GUI designed for transcranial ultrasound stimulation (TUS) experiments, supporting customizable masking paradigms and optional TPO-compatible stimulation workflow integration.
 
-* Audio generation modes:
+This version extends the standalone auditory mask generator by integrating:
+- NeuroFUS SDK communication
+- TPO-compatible workflow support
+- Ultrasound parameter synchronization
+- Combined TUS + auditory masking execution modes
 
-  * `Background Only`
-  * `Matching Only`
-  * `Combined`
-* Background types:
+---
 
-  * `Narrowband Noise`
-  * `Colored Noise`
-  * `Hybrid Ultrasound Mask`
-  * `Auditory Mondrian`
-* Playback controls:
+# Table of Contents
 
-  * `Play Audio`
-  * `Stop Audio`
-  * `Save`
-  * `Presets`
-  * `Reset`
-* TPO controls:
+- [Screenshots of GUI](#screenshots-of-gui)
+- [Installation](#installation)
+- [Run the Application](#run-the-application)
+- [Main Features](#main-features)
+  - [Audio Generation Modes](#audio-generation-modes)
+  - [Background Types](#background-types)
+  - [Stimulation Matching Audio Controls](#stimulation-matching-audio-controls)
+  - [Background Audio Controls](#background-audio-controls)
+  - [Spatialization](#spatialization)
+  - [Visualization](#visualization)
+  - [TPO / NeuroFUS Integration](#tpo--neurofus-integration)
+  - [Playback & File Actions](#playback--file-actions)
+- [Project Files](#project-files)
+- [Typical Workflow](#typical-workflow)
+- [Save Behavior](#save-behavior)
+- [Presets](#presets)
+- [Requirements](#requirements)
+- [Important Safety Notice](#important-safety-notice)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
+- [Citation](#citation)
 
-  * automatic or manual serial-port selection
-  * transducer listing after connect
-  * NeuroFUS stimulation parameter entry
-  * `Start Sonication`
-  * `Stop Sonication`
-* Stimulation modes:
+---
 
-  * `TUS Only`
-  * `TUS + Mask` with pre-mask and post-mask timing
-* Extra workflow support:
+# Screenshots of GUI
 
-  * preset save/load for GUI state
-  * audio/ultrasound/full reset actions
-  * `TUS + Mask` execution log with elapsed-time events
-  * double-click plot popups for enlarged waveform/spectral views
-* Session saving:
+<img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/75e342e2-7b9b-4ded-b2dc-e4bece311771" />
 
-  * generated `.wav`
-  * metadata `.json`
-  * optional component WAVs for combined output
+---
 
-## Project Files
+# Installation
 
-Core files currently used by the app:
+Make sure that Anaconda or Miniconda is installed before proceeding.
 
-* [main\_gui.py](./main_gui.py): main PyQt6 GUI
-* [session\_controller.py](./session_controller.py): builds audio sessions
-* [signal\_generator.py](./signal_generator.py): signal generation utilities
-* [utils.py](./utils.py): ramp/window helper functions
-* [audio\_engine.py](./audio_engine.py): play, stop, save audio
-* [plotting.py](./plotting.py): waveform and spectrum plots
-* [example\_stimulation.py](./example_stimulation.py): NeuroFUS stimulation execution
-* [stimulation\_mode.py](./stimulation_mode.py): coordinates `TUS Only` and `TUS + Mask`
-* [neurofus\_sdk.py](./neurofus_sdk.py): SDK wrapper for NeuroFUS serial commands
-* [logger.py](./logger.py): session metadata saving
-* [preset\_manager.py](./preset_manager.py): preset save/load and reset actions
+Clone the repository:
 
+```bash
+git clone https://github.com/hiramusarrat8-beep/auditory-mask-generator-tpo.git
+```
 
+Move into the project folder:
 
-## Requirements
+```bash
+cd auditory-mask-generator-tpo
+```
 
-Install Python packages:
+Create the Conda environment:
+
+```bash
+conda env create -f environment.yml
+```
+
+Activate the environment:
+
+```bash
+conda activate amg_app
+```
+
+The environment file installs the required Python packages from `requirements.txt`.
+
+---
+
+# Run the Application
+
+```bash
+python main_gui.py
+```
+
+---
+
+# Main Features
+
+## Audio Generation Modes
+
+- `Background Only`
+- `Matching Only`
+- `Combined`
+
+---
+
+## Background Types
+
+- Broadband Noise
+- Narrowband Noise
+- Hybrid Ultrasound Mask
+- Auditory Mondrian
+
+---
+
+## Stimulation Matching Audio Controls
+
+- pulse train duration
+- PRI / PRF
+- pulse duration
+- carrier frequency
+- ramp shape and ramp length
+- signal-to-noise ratio
+- pulse train repetition
+- matching volume
+
+---
+
+## Background Audio Controls
+
+- background duration
+- background volume
+- background ramping
+- hybrid mask configuration
+- Mondrian settings
+
+---
+
+## Spatialization
+
+- pan/lateralization control
+- left/right channel monitoring
+
+---
+
+## Visualization
+
+- PRF envelope zoom
+- full burst waveform view
+- FFT view
+- spectrogram view
+
+---
+
+## TPO / NeuroFUS Integration
+
+- TPO connection management
+- automatic COM port detection
+- ultrasound parameter synchronization
+- TUS-only mode
+- TUS + Mask mode
+- pre-mask and post-mask timing support
+
+---
+
+## Playback & File Actions
+
+- `Generate`
+- `Play`
+- `Stop Audio`
+- `Sonicate`
+- `Stop Sonication`
+- `Save WAV`
+- `Preset Save/Load`
+
+---
+
+# Project Files
+
+Core files used by the application:
+
+- `main_gui.py` — main PyQt6 GUI
+- `session_controller.py` — audio session orchestration
+- `signal_generator.py` — signal generation utilities
+- `audio_engine.py` — playback, stop, and WAV saving
+- `plotting.py` — waveform and spectrum visualization
+- `logger.py` — session metadata logging
+- `preset_manager.py` — save/load/reset preset handling
+- `example_stimulation.py` — TPO stimulation workflow integration
+- `neurofus_sdk.py` — NeuroFUS SDK communication layer
+- `utils.py` — helper utilities
+
+---
+
+# Typical Workflow
+
+1. Connect the NeuroFUS/TPO device.
+2. Select a playback mode.
+3. Configure masking parameters.
+4. Configure ultrasound parameters if using TUS mode.
+5. Generate the masking audio.
+6. Preview the audio if needed.
+7. Start sonication using:
+   - `TUS Only`
+   - `TUS + Mask`
+8. Save generated audio and metadata.
+
+---
+
+# Save Behavior
+
+`Save` writes:
+
+- generated WAV audio
+- JSON metadata sidecar
+- component WAVs for combined output when available
+
+The JSON metadata contains:
+
+- playback mode
+- generation parameters
+- saved filenames
+- audio duration
+- sample rate
+- channel count
+
+---
+
+# Presets
+
+Presets save only GUI configuration state, including:
+
+- stimulation matching audio fields
+- background audio fields
+- hybrid mask settings
+- Mondrian settings
+- ramping controls
+- volume sliders
+- pan/lateralization
+- graph display settings
+- playback mode
+
+---
+
+# Requirements
+
+Install Python packages manually if needed:
 
 ```bash
 pip install -r requirements.txt
@@ -79,160 +245,74 @@ pip install -r requirements.txt
 
 Current `requirements.txt` includes:
 
-* `numpy`
-* `scipy`
-* `matplotlib`
-* `PyQt6`
-* `sounddevice`
-* `pyserial`
-* `colorednoise`
+- numpy
+- scipy
+- matplotlib
+- PyQt6
+- sounddevice
+- colorednoise
 
-## Run
+---
 
-Start the GUI with:
+# Important Safety Notice
 
-```bash
-python main\_gui.py
-```
+This software is intended for research use only.
 
-## Windows Setup Notes
+Users are responsible for:
+- validating all ultrasound parameters
+- following institutional safety protocols
+- verifying NeuroFUS/TPO device configuration before sonication
+- ensuring safe stimulation operation
+- ensuring proper synchronization between stimulation and masking playback
 
-If you are sharing this on Windows, these are the most common setup points:
+Never sonicate directly in air and always follow manufacturer safety recommendations.
 
-* Use a recent Python 3 installation.
-* Open the project in PowerShell or Command Prompt.
-* Install dependencies with:
+The developers are not responsible for misuse of stimulation hardware or unsafe experimental configurations.
 
-```bash
-pip install -r requirements.txt
-```
+---
 
-* Make sure the NeuroFUS device is connected by USB before trying to connect from the GUI.
-* If the TPO device does not appear, unplug and reconnect it, then click `Refresh` in the GUI.
-* If Windows assigned a COM port, the app can usually detect it automatically through the `Auto` option.
-* If audio playback fails, confirm that the system has a working output device selected in Windows sound settings.
-* If `sounddevice` has installation or runtime issues on another machine, updating `pip` and reinstalling the requirements usually helps:
+# Troubleshooting
+
+## Audio playback fails
+
+Confirm that the system has a working output device selected.
+
+If `sounddevice` has installation/runtime issues:
 
 ```bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-* If serial access fails, close any other app that may already be using the same COM port.
+---
 
-## macOS / Linux Notes
+## TPO connection not detected
 
-* Install dependencies the same way:
+- verify USB connection
+- verify COM port access
+- reconnect the device
+- use the refresh connection button
+- ensure no other application is controlling the TPO simultaneously
 
-```bash
-pip install -r requirements.txt
-```
+---
 
-* Typical serial device names are:
+# License
 
-  * macOS: `/dev/tty.usbmodem...` or `/dev/cu.usbmodem...`
-  * Linux: `/dev/ttyACM0` or `/dev/ttyUSB0`
-* The GUI `Auto` option should usually detect the NeuroFUS serial device if it is connected.
-* On Linux, if serial access is denied, the user may need permission for serial devices, depending on system configuration.
-* If audio playback does not work, confirm the correct output device is available and not blocked by another process.
+This software is provided for non-commercial research use only.
 
-## Typical Workflow
+By using this software, users agree to follow all applicable institutional, ethical, and ultrasound safety guidelines.
 
-### Audio Only
+See the `LICENSE` file for full terms and conditions.
 
-1. Choose a playback mode.
-2. Enter the sound parameters.
-3. Click `Generate`.
-4. Click `Play Audio` to preview.
-5. Click `Save` to save the generated audio and metadata.
-6. Use `Presets` to save or restore a parameter setup if needed.
+NeuroFUS SDK components and related hardware interfaces remain the property of their respective developers/manufacturers.
 
-### TUS Only
+---
 
-1. Connect the NeuroFUS device in the `TPO Connection` panel.
-2. Confirm the status changes from `Disconnected` to `Connected: <port> (Firmware <version>)`.
-3. Select a transducer.
-4. Enter ultrasound parameters.
-5. Set `Stimulation Mode` to `TUS Only`.
-6. Click `Start Sonication`.
+# Citation
 
-### TUS + Mask
+If you use this GUI in research or academic work, please cite:
 
-1. Generate the masking audio first.
-2. Connect the NeuroFUS device.
-3. Enter ultrasound parameters.
-4. Set `Stimulation Mode` to `TUS + Mask`.
-5. Enter `Pre-Mask` and `Post-Mask` times if needed.
-6. Click `Start Sonication`.
-
-In `TUS + Mask` mode, the app:
-
-* starts mask playback
-* waits for the pre-mask delay
-* starts sonication
-* keeps the mask running through the requested timing
-* stops audio automatically at the end
-
-After a `TUS + Mask` run, the GUI can show an elapsed-time execution log for:
-
-* mask start
-* sonication start
-* sonication stop
-* mask stop
-
-## Save Behavior
-
-`Save` writes:
-
-* the main generated WAV
-* a JSON metadata sidecar
-* extra component WAVs for combined output when available
-
-The JSON contains:
-
-* playback mode
-* stimulation mode
-* generation parameters
-* saved filenames
-* audio duration and sample rate
-* current ultrasound/TPO settings summary
-* execution log entries for `TUS + Mask` runs when available
-
-## TPO Connection Notes
-
-* The TPO port selector supports `Auto` plus manually detected serial ports.
-* After connection, the GUI shows the connected port and firmware.
-* `Start Sonication` is disabled until the TPO is connected.
-* `Stop Sonication` is enabled only while a stimulation run is active.
-
-## Notes
-
-* `nf\_start()` on the NeuroFUS side is non-blocking.
-* For repeated trains, the app handles repetition timing in Python.
-* `Stop Sonication` is most useful for repeated trains or immediate abort requests.
-* In `Full Burst View`, the red gate/envelope trace is a visibility-oriented summary for long-duration plotting, while `PRF Envelope Zoom` is the detailed local view.
-* In `TUS + Mask` mode, make sure the generated audio is long enough to cover:
-
-  * pre-mask
-  * stimulation duration
-  * post-mask
-
-## Troubleshooting
-
-### Transducer list is empty
-
-* Make sure the TPO device is actually connected first.
-* The transducer list is populated only after a successful TPO connection.
-
-### Start Sonication is disabled
-
-* Connect the TPO device first.
-
-### Save is disabled
-
-* Generate audio first.
-
-### Stop Audio is disabled
-
-* It starts disabled on app launch and becomes available after audio is generated.
-
+Hira Musarrat, Benjamin Kop  
+Auditory Mask Generator – TPO Edition  
+GitHub repository:  
+https://github.com/hiramusarrat8-beep/auditory-mask-generator-tpo
