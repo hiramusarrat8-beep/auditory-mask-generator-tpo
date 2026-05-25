@@ -1,0 +1,46 @@
+Auditory Mask Generator – Research Use License
+
+Copyright (c) 2026 Benjamin Kop and Hira Musarrat
+
+Permission is hereby granted to use, copy, modify, and distribute this
+software and associated documentation files for non-commercial research
+and educational purposes only, subject to the following conditions:
+
+1. This software is intended solely for research and academic use.
+
+2. Commercial use, sublicensing, resale, or incorporation into commercial
+products or services is prohibited without prior written permission from
+the authors.
+
+3. Any publications, presentations, posters, reports, or academic work
+using this software must appropriately cite:
+   - the GitHub repository
+   - any associated publication describing the software
+
+4. Users are responsible for ensuring safe and ethical operation of
+transcranial ultrasound stimulation (TUS) hardware and associated
+experimental systems.
+
+5. Users must follow all applicable:
+   - institutional review board (IRB) requirements
+   - ethics approvals
+   - ultrasound safety guidelines
+   - device manufacturer recommendations
+
+6. The authors assume no responsibility or liability for:
+   - hardware damage
+   - unsafe sonication
+   - participant injury
+   - data loss
+   - misuse of stimulation parameters
+   - improper device operation
+
+7. This software is provided "as is", without warranty of any kind,
+express or implied, including but not limited to warranties of
+merchantability, fitness for a particular purpose, and noninfringement.
+
+8. NeuroFUS SDK components and related hardware interfaces remain the
+property of their respective developers and manufacturers.
+
+THE AUTHORS SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY ARISING FROM THE USE OF THIS SOFTWARE.
