@@ -1,0 +1,83 @@
+{
+  "preset_version": 1,
+  "saved_at": "2026-05-14T19:36:56",
+  "ui_state": {
+    "line_edits": {
+      "ptd_input": "1000",
+      "prp_input": "200",
+      "prf_input": "5",
+      "pd_input": "100",
+      "carrier_input": "1000",
+      "ramp_len_input": "",
+      "snr_input": "",
+      "ptrp_input": "",
+      "ptrf_input": "",
+      "ptrd_input": "",
+      "num_trains_input": "",
+      "narrowband_center_input": "1000",
+      "narrowband_bandwidth_input": "100",
+      "bg_time_input": "5",
+      "hybrid_prf_input": "5",
+      "hybrid_harmonics_input": "10",
+      "hybrid_bandwidth_input": "200",
+      "hybrid_density_input": "4",
+      "hybrid_tone_duration_input": "500",
+      "mondrian_density_input": "8",
+      "mondrian_tone_duration_input": "500",
+      "mondrian_pf_min_input": "",
+      "mondrian_pf_max_input": "15000",
+      "mondrian_prf_min_input": "1000",
+      "mondrian_prf_max_input": "15000",
+      "mondrian_duty_cycle_input": "50",
+      "pulse_start_input": "0",
+      "tus_start_input": "0",
+      "focal_depth_input": "40",
+      "isppa_input": "30",
+      "ultra_ptd_input": "1000",
+      "ultra_prp_input": "200",
+      "ultra_prf_input": "5",
+      "ultra_pd_input": "100",
+      "ultra_ramp_len_input": "",
+      "ultra_ptrp_input": "",
+      "ultra_ptrf_input": "",
+      "ultra_ptrd_input": "",
+      "ultra_num_trains_input": ""
+    },
+    "combos": {
+      "ramp_shape_combo": "None",
+      "bg_type_combo": "White Noise",
+      "bg_ramp_shape": "None",
+      "stim_mode_combo": "TUS + Mask",
+      "ultra_ramp_shape_combo": "None",
+      "playback_mode_combo": "Matching Only",
+      "transducer_combo": "0: CTX500A109",
+      "colored_noise_combo": "Pink"
+    },
+    "checkboxes": {
+      "enable_carrier_checkbox": true,
+      "snr_checkbox": false,
+      "enable_ptr_checkbox": false,
+      "enable_dual_checkbox": false,
+      "enforce_limits_checkbox": false,
+      "ultra_enable_ptr_checkbox": false,
+      "show_fft_checkbox": true,
+      "show_spectrogram_checkbox": false
+    },
+    "sliders": {
+      "matching_volume_slider": 50,
+      "bg_volume_slider": 50,
+      "pulse_volume_slider": 100,
+      "pan_slider": 0,
+      "hybrid_prf_weight_slider": 50,
+      "hybrid_mondrian_weight_slider": 30,
+      "hybrid_broadband_weight_slider": 20
+    },
+    "spinboxes": {
+      "bg_ramp_length": 10.0
+    },
+    "radio_buttons": {
+      "hybrid_auto_radio": true,
+      "hybrid_manual_radio": false
+    }
+  }
+}

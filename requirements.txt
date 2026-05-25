@@ -1,0 +1,7 @@
+numpy
+scipy
+matplotlib
+PyQt6
+sounddevice
+pyserial
+colorednoise
