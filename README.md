@@ -1,6 +1,6 @@
 # Auditory Mask Generator – TPO Edition
 
-> Developed by Dr. Benjamin Kop and Hira Musarrat
+> Developed by Hira Musarrat and Dr. Benjamin Kop
 
 > [!WARNING]
 > This software is intended for research use only and should be operated only by trained users following institutional ultrasound safety guidelines.
