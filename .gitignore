@@ -216,3 +216,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# AMG-TPO project files
+*.wav
+*.log
+
+# Generated presets/backups
+*.bak
+*.tmp
+
+# VS Code
+.vscode/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
