@@ -299,7 +299,9 @@ See the `LICENSE` file for full terms and conditions.
 NeuroFUS SDK components and related hardware interfaces remain the property of their respective developers/manufacturers.
 
 ---
-
+# Contact
+ Email: hiramusarrat8@gmail.com
+ 
 # Citation
 
 If you use this GUI in research or academic work, please cite:
