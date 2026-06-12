@@ -56,6 +56,8 @@ import plotting
 import signal_generator
 from preset_manager import PresetManager
 
+EXPECTED_FIRMWARE = "6.06.1"
+
 class BasicMaskGUI(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -2229,18 +2231,19 @@ class BasicMaskGUI(QMainWindow):
             "LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, "
             "ACCURACY, OR NON-INFRINGEMENT. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE "
             "OF THE SOFTWARE IS WITH YOU.</p>"
-            "<p>&#8226; <b>Limitation of Liability:</b> TO THE FULLEST EXTENT PERMITTED BY "
-            "APPLICABLE LAW, THE DEVELOPERS, AUTHORS, AND CONTRIBUTORS OF THIS SOFTWARE ACCEPT "
-            "NO LIABILITY WHATSOEVER FOR ANY DAMAGES, LOSSES, INJURIES, HARM, OR ADVERSE "
+            "<p>&#8226; <b>Limitation of Liability:</b> UNDER NO CIRCUMSTANCES AND FOR NO "
+            "REASON WHATSOEVER SHALL THE DEVELOPERS, AUTHORS, AND CONTRIBUTORS OF THIS SOFTWARE "
+            "ACCEPT ANY LIABILITY WHATSOEVER FOR ANY DAMAGES, LOSSES, INJURIES, HARM, OR ADVERSE "
             "OUTCOMES OF ANY KIND ARISING FROM OR IN CONNECTION WITH THE USE, MISUSE, "
             "MODIFICATION, OR DISTRIBUTION OF THIS SOFTWARE OR THE INABILITY TO USE IT, "
             "INCLUDING BUT NOT LIMITED TO DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, "
             "OR PUNITIVE DAMAGES, PERSONAL INJURY, PROPERTY DAMAGE, LOSS OF DATA, OR FINANCIAL "
             "LOSS, REGARDLESS OF CAUSE, WHETHER IN CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, "
-            "OR ANY OTHER LEGAL THEORY. THIS LIMITATION APPLIES WITHOUT EXCEPTION, INCLUDING "
-            "WHEN THE SOFTWARE IS USED IN FULL ACCORDANCE WITH ALL APPLICABLE GUIDELINES AND "
-            "REGULATIONS, WHEN SAFETY LIMITS ARE ENFORCED, AND REGARDLESS OF WHETHER THE "
-            "DEVELOPERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>"
+            "OR ANY OTHER LEGAL THEORY. THIS EXCLUSION IS ABSOLUTE AND APPLIES WITHOUT ANY "
+            "EXCEPTION WHATSOEVER — INCLUDING WHEN THE SOFTWARE IS USED IN FULL ACCORDANCE WITH "
+            "ALL APPLICABLE GUIDELINES AND REGULATIONS, WHEN SAFETY LIMITS ARE ENFORCED, WHEN "
+            "ALL IRB REQUIREMENTS HAVE BEEN MET, AND REGARDLESS OF WHETHER THE DEVELOPERS HAVE "
+            "BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>"
             "<p>&#8226; <b>Indemnification:</b> You agree to indemnify, defend, and hold harmless "
             "the developers, authors, and contributors of this software from and against any and "
             "all claims, liabilities, damages, losses, and expenses (including reasonable legal "
@@ -2320,6 +2323,17 @@ class BasicMaskGUI(QMainWindow):
         self.status_label.setText(f"Connected: {connected_port} (Firmware {firmware})")
         self._set_tpo_connected_state(True)
         self._populate_transducers()
+        if firmware != EXPECTED_FIRMWARE:
+            QMessageBox.warning(
+                self,
+                "WARNING",
+                f"!WARNING!\n\n"
+                f"This GUI was developed specifically for NeuroFUS Firmware Version {EXPECTED_FIRMWARE}\n\n"
+                f"Your firmware version is {firmware}.\n\n"
+                f"Operating a system not using firmware version {EXPECTED_FIRMWARE} "
+                f"may lead to errors or unexpected output.\n\n"
+                f"If you choose to proceed, proceed with caution.",
+            )
 
     def _on_connect_failed(self, message):
         self._connect_countdown_timer.stop()
