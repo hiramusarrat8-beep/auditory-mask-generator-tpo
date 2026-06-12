@@ -3,7 +3,7 @@
 > Developed by Hira Musarrat and Dr. Benjamin Kop
 
 > [!WARNING]
-> This software is intended for research use only and should be operated only by trained users following institutional ultrasound safety guidelines.
+> This software is intended for research use only and should be operated only by trained users following institutional ultrasound safety guidelines. This software governed by an [End User License Agreement](EULA.md).
 
 A PyQt6-based auditory masking GUI designed for transcranial ultrasound stimulation (TUS) experiments, supporting customizable masking paradigms and optional TPO-compatible stimulation workflow integration.
 
