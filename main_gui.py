@@ -1970,6 +1970,9 @@ class BasicMaskGUI(QMainWindow):
     def _on_sonication_failed(self, message):
         self.set_sonication_running(False)
         self._update_execution_log([])
+        if getattr(self, "_emergency_stop_triggered", False):
+            self._emergency_stop_triggered = False
+            return
         QMessageBox.critical(self, "Sonication Failed", message)
 
     def _cleanup_sono_worker(self):
@@ -2351,6 +2354,8 @@ class BasicMaskGUI(QMainWindow):
         super().keyPressEvent(event)
 
     def _escape_emergency_stop(self):
+        self._emergency_stop_triggered = True
+
         if self._countdown_timer is not None:
             self._abort_sonication_countdown()
 
