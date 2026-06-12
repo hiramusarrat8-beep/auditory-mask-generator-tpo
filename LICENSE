@@ -1,4 +1,4 @@
-Auditory Mask Generator – Research Use License
+Research Use and Non-Commercial License
 
 Copyright (c) 2026 Benjamin Kop and Hira Musarrat
 
@@ -6,41 +6,51 @@ Permission is hereby granted to use, copy, modify, and distribute this
 software and associated documentation files for non-commercial research
 and educational purposes only, subject to the following conditions:
 
-1. This software is intended solely for research and academic use.
+1. LICENSE RESTRICTIONS. This software is made available for non-commercial
+research and academic use only. You are free to use, copy, modify, and
+redistribute this software for non-commercial purposes, provided that this
+copyright notice and permission notice are included in all copies or
+substantial portions of the software. Commercial use of any kind —
+including selling, sublicensing for commercial gain, or incorporation into
+commercial products or services — is strictly prohibited without prior
+written permission from the authors.
 
-2. Commercial use, sublicensing, resale, or incorporation into commercial
-products or services is prohibited without prior written permission from
-the authors.
+2. CITATION REQUIREMENTS. Any use of this software that contributes to or
+informs a published work, conference presentation, poster, grant application,
+or any other public dissemination must include a citation to this software
+as specified in the citation guidance on the GitHub repository from which
+this software was downloaded. Once a peer-reviewed publication describing
+this software has been published, that publication must additionally be cited
+in all such works. Compliance with these citation requirements is a condition
+of use, and failure to comply constitutes a breach of this agreement.
 
-3. Any publications, presentations, posters, reports, or academic work
-using this software must appropriately cite:
-   - the GitHub repository
-   - any associated publication describing the software
+3. DISCLAIMER OF WARRANTIES. THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT
+WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY,
+RELIABILITY, OR NON-INFRINGEMENT. THE ENTIRE RISK AS TO THE QUALITY AND
+PERFORMANCE OF THE SOFTWARE IS WITH THE USER.
 
-4. Users are responsible for ensuring safe and ethical operation of
-transcranial ultrasound stimulation (TUS) hardware and associated
-experimental systems.
+4. LIMITATION OF LIABILITY. UNDER NO CIRCUMSTANCES AND FOR NO REASON
+WHATSOEVER SHALL THE AUTHORS, CONTRIBUTORS, OR DEVELOPERS OF THIS SOFTWARE
+ACCEPT ANY LIABILITY WHATSOEVER FOR ANY DAMAGES, LOSSES, INJURIES, HARM, OR
+ADVERSE OUTCOMES OF ANY KIND ARISING FROM OR IN CONNECTION WITH THE USE,
+MISUSE, MODIFICATION, OR DISTRIBUTION OF THIS SOFTWARE OR THE INABILITY TO
+USE IT, INCLUDING BUT NOT LIMITED TO DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+CONSEQUENTIAL, OR PUNITIVE DAMAGES, PERSONAL INJURY, PROPERTY DAMAGE, LOSS
+OF DATA, OR FINANCIAL LOSS, REGARDLESS OF CAUSE, WHETHER IN CONTRACT, TORT,
+NEGLIGENCE, STRICT LIABILITY, OR ANY OTHER LEGAL THEORY. THIS EXCLUSION IS
+ABSOLUTE AND APPLIES WITHOUT ANY EXCEPTION WHATSOEVER — INCLUDING WHEN THE
+SOFTWARE IS USED IN FULL ACCORDANCE WITH ALL APPLICABLE GUIDELINES AND
+REGULATIONS, WHEN ALL IRB REQUIREMENTS HAVE
+BEEN MET, AND REGARDLESS OF WHETHER THE AUTHORS HAVE BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES.
 
-5. Users must follow all applicable:
-   - institutional review board (IRB) requirements
-   - ethics approvals
-   - ultrasound safety guidelines
-   - device manufacturer recommendations
+5. INDEMNIFICATION. By using this software, you agree to indemnify, defend,
+and hold harmless the authors and contributors from and against any and all
+claims, liabilities, damages, losses, and expenses (including reasonable
+legal costs) arising from or related to your use of this software or any
+breach of any term of this license.
 
-6. The authors assume no responsibility or liability for:
-   - hardware damage
-   - unsafe sonication
-   - participant injury
-   - data loss
-   - misuse of stimulation parameters
-   - improper device operation
-
-7. This software is provided "as is", without warranty of any kind,
-express or implied, including but not limited to warranties of
-merchantability, fitness for a particular purpose, and noninfringement.
-
-8. NeuroFUS SDK components and related hardware interfaces remain the
-property of their respective developers and manufacturers.
-
-THE AUTHORS SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
-LIABILITY ARISING FROM THE USE OF THIS SOFTWARE.
+6. END USER LICENSE AGREEMENT. Use of this software is additionally governed
+by the End User License Agreement (EULA), provided separately in EULA.md.
+By using this software you confirm that you have read and accept the EULA.
