@@ -1,16 +1,15 @@
-# Auditory Mask Generator – TPO Edition
-
+# Auditory Mask Generator – NeuroFUS Edition
 > Developed by Hira Musarrat and Dr. Benjamin Kop
 
 > [!WARNING]
 > This software is intended for research use only and should be operated only by trained users following institutional ultrasound safety guidelines. This software governed by an [End User License Agreement](EULA.md).
 
-A PyQt6-based auditory masking GUI designed for transcranial ultrasound stimulation (TUS) experiments, supporting customizable masking paradigms and optional TPO-compatible stimulation workflow integration.
+A PyQt6-based auditory masking GUI designed for transcranial ultrasound stimulation (TUS) experiments, supporting customizable masking paradigms and optional NeuroFUS-compatible stimulation workflow integration.
 
 This version extends the standalone auditory mask generator by integrating:
-- NeuroFUS SDK communication
-- TPO-compatible workflow support
-- Ultrasound parameter synchronization
+- NeuroFUS system control
+- NeuroFUS-compatible workflow support
+- Ultrasound parameter synchronization with auditory stimuli
 - Combined TUS + auditory masking execution modes
 
 ---
@@ -83,18 +82,9 @@ python main_gui.py
 
 ## Audio Generation Modes
 
-- `Background Only`
 - `Matching Only`
+- `Background Only`
 - `Combined`
-
----
-
-## Background Types
-
-- Broadband Noise
-- Narrowband Noise
-- Hybrid Ultrasound Mask
-- Auditory Mondrian
 
 ---
 
@@ -110,7 +100,14 @@ python main_gui.py
 - matching volume
 
 ---
+## Background Types
 
+- Broadband Noise
+- Narrowband Noise
+- Hybrid Ultrasound Mask
+- Auditory Mondrian
+
+---
 ## Background Audio Controls
 
 - background duration
