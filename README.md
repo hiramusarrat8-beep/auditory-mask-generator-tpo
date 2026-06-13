@@ -1,6 +1,6 @@
 # Auditory Mask Generator – NeuroFUS Edition
 > Developed by Hira Musarrat and Dr. Benjamin Kop
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20681923.svg)](https://zenodo.org/doi/10.5281/zenodo.20681923)
 > [!WARNING]
 > This software is intended for research use only and should be operated only by trained users following institutional ultrasound safety guidelines. This software governed by an [End User License Agreement](EULA.md).
 
