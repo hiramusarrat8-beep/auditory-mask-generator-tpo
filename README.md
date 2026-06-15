@@ -312,6 +312,6 @@ NeuroFUS SDK components and related hardware interfaces remain the property of t
 If you use this GUI in research or academic work, please cite:
 
 Hira Musarrat, Benjamin Kop  
-Auditory Mask Generator – TPO Edition  
+Auditory Mask Generator – NeuroFUS Edition  
 GitHub repository:  
 https://github.com/hiramusarrat8-beep/auditory-mask-generator-tpo
