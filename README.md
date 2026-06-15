@@ -305,7 +305,7 @@ NeuroFUS SDK components and related hardware interfaces remain the property of t
 
 ---
 # Contact
- Email: hiramusarrat8@gmail.com
+ Email: hiramusarrat8@gmail.com or benjamin.kop@outlook.com
  
 # Citation
 
