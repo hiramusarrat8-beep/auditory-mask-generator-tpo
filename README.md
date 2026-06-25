@@ -35,9 +35,11 @@ This version extends the standalone auditory mask generator by integrating:
 
 ---
 
-# Screenshots of GUI
+# Screenshot of GUI
 
-<img width="1919" height="1072" alt="image" src="https://github.com/user-attachments/assets/f61c908d-e98d-437a-a92c-12cb2b56e273" />
+<img width="1596" height="895" alt="image" src="https://github.com/user-attachments/assets/32f4847b-3f96-4afe-9cd8-b321ec450bbf" />
+
+
 
 # Tutorial video
 [![Watch the tutorial](https://img.youtube.com/vi/gU6FDSrJ-Fk/maxresdefault.jpg)](https://www.youtube.com/watch?v=gU6FDSrJ-Fk)
