@@ -19,6 +19,7 @@ This version extends the standalone auditory mask generator by integrating:
 # Table of Contents
 
 - [Screenshots of GUI](#screenshots-of-gui)
+- [Tutorial video](#tutorial-video)
 - [Installation](#installation)
 - [Run the Application](#run-the-application)
 - [Main Features](#main-features)
