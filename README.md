@@ -20,7 +20,7 @@ This version extends the standalone auditory mask generator by integrating:
 
 - [Screenshots of GUI](#screenshots-of-gui)
 - [Tutorial video](#tutorial-video)
-- [Stimulation Mode](#about-tus-+-mask-mode)
+- [Stimulation Mode](#about-tus-+-mask-mode:)
 - [Installation](#installation)
 - [Run the Application](#run-the-application)
 - [Main Features](#main-features)
