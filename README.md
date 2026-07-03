@@ -56,9 +56,9 @@ Under **Stimulation Mode**, you can choose between two modes:
 To make the process transparent, we have also included a detailed **timestamped execution log**. This records how the timing unfolds during the sonication session, including mask onset, TUS start commands, device acknowledgement of sonication, planned pulse-train completion, and mask offset.
 
 **Note:** The example below is a demonstration created to illustrate the timing information available in the GUI. The application also provides a **timeline view** for visualizing the sequence of events throughout the stimulation session.
-<img width="732" height="398" alt="image" src="https://github.com/user-attachments/assets/8582ad02-655a-49b7-be48-14eef9b1839a" />
+<img width="1858" height="995" alt="image" src="https://github.com/user-attachments/assets/b965e8bd-d8a7-4649-8c21-c926a9a21286" />
 
-<img width="726" height="402" alt="image" src="https://github.com/user-attachments/assets/bc3b37d5-2584-416d-8a2b-ef194d1d2667" />
+<img width="1876" height="1043" alt="image" src="https://github.com/user-attachments/assets/8a508771-e429-42ea-b9cc-a6c74ee77842" />
 
 
 
