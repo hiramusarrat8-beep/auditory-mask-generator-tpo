@@ -20,7 +20,7 @@ This version extends the standalone auditory mask generator by integrating:
 
 - [Screenshots of GUI](#screenshots-of-gui)
 - [Tutorial video](#tutorial-video)
-- [Stimulation Mode](#about-tus-+-mask-mode:)
+- [Stimulation Mode](#about-tus-+-mask-mode)
 - [Installation](#installation)
 - [Run the Application](#run-the-application)
 - [Main Features](#main-features)
@@ -46,7 +46,7 @@ This version extends the standalone auditory mask generator by integrating:
 [![Watch the tutorial](https://img.youtube.com/vi/gU6FDSrJ-Fk/maxresdefault.jpg)](https://www.youtube.com/watch?v=gU6FDSrJ-Fk)
 ---
 
-# About TUS + Mask Mode:
+# About TUS + Mask Mode
 Under **Stimulation Mode**, you can choose between two modes:
 
 **• TUS:** Simply delivers ultrasound sonication using the parameters you have entered in the Ultrasound Parameters panel.
