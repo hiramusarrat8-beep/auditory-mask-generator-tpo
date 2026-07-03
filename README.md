@@ -20,6 +20,7 @@ This version extends the standalone auditory mask generator by integrating:
 
 - [Screenshots of GUI](#screenshots-of-gui)
 - [Tutorial video](#tutorial-video)
+- [Stimulation Mode](#about-tus-+-mask-mode)
 - [Installation](#installation)
 - [Run the Application](#run-the-application)
 - [Main Features](#main-features)
@@ -35,7 +36,7 @@ This version extends the standalone auditory mask generator by integrating:
 
 ---
 
-# Screenshot of GUI
+# Screenshot of Main GUI
 
 <img width="1596" height="895" alt="image" src="https://github.com/user-attachments/assets/32f4847b-3f96-4afe-9cd8-b321ec450bbf" />
 
@@ -45,7 +46,19 @@ This version extends the standalone auditory mask generator by integrating:
 [![Watch the tutorial](https://img.youtube.com/vi/gU6FDSrJ-Fk/maxresdefault.jpg)](https://www.youtube.com/watch?v=gU6FDSrJ-Fk)
 ---
 
+# About TUS + Mask Mode:
+Under **Stimulation Mode**, you can choose between two modes:
 
+**• TUS:** Simply delivers ultrasound sonication using the parameters you have entered in the Ultrasound Parameters panel.
+
+**• TUS + Mask:** This is one of my favourite features of the GUI. It allows ultrasound sonication and the auditory mask to be played together while letting you define the precise timing of the masking sound relative to the ultrasound stimulation.
+
+To make the process transparent, we have also included a detailed **timestamped execution log**. This records how the timing unfolds during the sonication session, including mask onset, TUS start commands, device acknowledgement of sonication, planned pulse-train completion, and mask offset.
+
+**Note:** The example below is a demonstration created to illustrate the timing information available in the GUI. The application also provides a **timeline view** for visualizing the sequence of events throughout the stimulation session.
+<img width="732" height="398" alt="image" src="https://github.com/user-attachments/assets/8582ad02-655a-49b7-be48-14eef9b1839a" />
+
+<img width="726" height="402" alt="image" src="https://github.com/user-attachments/assets/bc3b37d5-2584-416d-8a2b-ef194d1d2667" />
 
 
 
